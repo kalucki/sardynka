@@ -1,0 +1,145 @@
+:root {
+  --beige: #f5f0e1;
+  --light-beige: #faf6ef;
+  --accent: #c3b299;
+  --text: #333;
+  --serif: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--serif);
+  color: var(--text);
+  background: var(--light-beige);
+  line-height: 1.6;
+}
+
+header.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid white;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  /* Tone down background: lower brightness, reduce saturation, slight contrast */
+  filter: brightness(0.6) saturate(0.7) contrast(0.9);
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.hero .overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero .overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .overlay a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--light-beige);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hero .overlay a:hover {
+  background: var(--beige);
+  color: var(--text);
+}
+
+section.info {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section.info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+section.info p {
+  margin-bottom: 1rem;
+}
+
+.info .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info .grid div {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info .grid div a[href^="tel:"] {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: var(--light-beige);
+}
+
+.info .grid div a[href^="tel:"]:hover {
+  color: var(--text);
+  background-color: var(--beige);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+} 
