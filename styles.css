@@ -62,6 +62,7 @@ header.hero {
   padding: 1rem 2rem;
   background: rgba(0,0,0,0.3);
   border-radius: 8px;
+  width:85%;
 }
 
 .hero .overlay h1 {
@@ -91,9 +92,10 @@ header.hero {
 }
 
 section.info {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 
 section.info h2 {
@@ -112,6 +114,7 @@ section.info p {
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .info .grid div {
@@ -119,6 +122,9 @@ section.info p {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .info .grid div a[href^="tel:"] {
@@ -135,6 +141,25 @@ section.info p {
 .info .grid div a[href^="tel:"]:hover {
   color: var(--text);
   background-color: var(--beige);
+}
+
+/* Make iframe responsive */
+.info .grid iframe {
+  width: 100% !important;
+  height: 300px !important;
+  margin: 0 !important;
+  border-radius: 8px;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  section.info {
+    padding: 4rem 2rem;
+  }
+  
+  .info .grid iframe {
+    height: 450px !important;
+  }
 }
 
 footer {
