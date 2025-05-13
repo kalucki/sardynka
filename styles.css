@@ -150,6 +150,11 @@ section.info p {
   margin: 0 !important;
   border-radius: 8px;
 }
+.doggo-container {
+  height: 400px;
+  width: 400px;
+
+}
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
@@ -167,4 +172,58 @@ footer {
   padding: 2rem 0;
   font-size: 0.9rem;
   color: #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.footer-image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;  /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  transform: rotate(-2deg);  /* Slight tilt */
+  border: 3px solid var(--light-beige);  /* Light border */
+  padding: 8px;  /* Space between image and border */
+  background: white;  /* White background for padding area */
+}
+
+.footer-image:last-child {
+  transform: rotate(2deg);  /* Opposite tilt for second image */
+}
+
+.footer-image:hover {
+  transform: rotate(0) scale(1.05);  /* Straighten and slightly enlarge on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .footer-images {
+    gap: 1rem;
+  }
+  
+  .footer-image {
+    max-width: 150px;
+    transform: rotate(-1deg);  /* Less tilt on mobile */
+  }
+  
+  .footer-image:last-child {
+    transform: rotate(1deg);  /* Less tilt on mobile */
+  }
 } 
